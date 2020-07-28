@@ -1,0 +1,14 @@
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body {
+    font-size: 100%;
+    @include baseFont;
+}
+h1,
+h2, 
+h3 {
+    @include headerFont;
+}
