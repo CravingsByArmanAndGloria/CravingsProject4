@@ -6,9 +6,15 @@
 body {
     font-size: 100%;
     @include baseFont;
+    margin: 0;
+    text-align: center;
 }
 h1,
 h2, 
 h3 {
     @include headerFont;
 }
+
+//MEDIA QUERY
+
+
