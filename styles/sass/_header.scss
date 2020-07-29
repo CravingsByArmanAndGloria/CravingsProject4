@@ -1,3 +1,57 @@
 h1 {
-    font-size: 4rem;
+    font-size: 10rem;
+    color: $color4;
+    padding: 15%;
+    text-shadow: 3px 3px 5px $color2;
+}
+
+
+header {
+    @include colorTheme1;
+    background-image: url(../../img/byXiaolongWongAtUnsplash.jpg);
+    background-size: cover;
+    height: 150vh;
+    margin-top: -10%;
+    background-position: center;
+}
+
+header a {
+    @include allButton;
+    text-decoration: none;
+}
+ header a:hover,
+ header a:active,
+ header a:focus-within {
+     @include allButtonHover;
+ }
+
+ //MEDIA QUERY
+ @media (max-width: 1100px){
+     h1 {
+         padding-top: 50%;
+     }
+ }
+
+ @media (orientation: landscape) and (max-width: 900px){
+    h1 {
+        font-size: 5rem;
+        padding-top: 25%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 900px){
+    h1 {
+        font-size: 8rem;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 700px){
+    h1 {
+        font-size: 4.5rem;
+        margin-left: -5%;
+        padding-top: 80%;
+    }
+    header {
+        height: 100vh;
+    }
 }

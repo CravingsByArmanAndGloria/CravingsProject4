@@ -1,5 +1,15 @@
 // variables
 // colours
+$color1:rgb(255, 99, 71);
+$color2: rgb(67, 235, 67);
+$color3: rgb(255, 166, 0);
+$color4: rgb(220, 20, 143);
+$color5: #fff;
+$color6: rgba(170, 170, 170, 0.541);
+
+@mixin colorTheme1 {
+    background: radial-gradient($color1 50%,$color3 25%, $color2 25%);
+}
 // fonts
 @mixin baseFont {
     font-family: 'Roboto', sans-serif;
@@ -13,4 +23,21 @@
 
 // mixins
 // button styles
+@mixin allButton($buttonBgc: $color1, $buttonC: $color5){
+    background-color: $buttonBgc;
+    color: $buttonC;
+    padding: 1.5% 2.5%;
+    text-align: center;
+    line-height: 35.6px;
+    font-size: 20px;
+    margin: 5%;
+    border: 5px solid $color5;
+    border-radius: 5% 5% 70% 70%;
+    box-shadow: 2px 16px 2px $color6;
+}
+
+@mixin allButtonHover($borderCH: $color2){
+    border: 5px solid $borderCH;
+    border-bottom-width: 20px;
+}
 // question styles
