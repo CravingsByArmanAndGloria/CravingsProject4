@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -255,11 +256,61 @@ h3 {
   font-family: 'Recursive', sans-serif;
 }
 
+.imageOptions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.imageOne,
+.imageTwo,
+.imageThree,
+.imageFour {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.imageOne {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.imageTwo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.imageThree {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.imageFour {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+img {
+  width: 100%;
+}
+
+.images {
+  width: 100%;
+}
+
 h1 {
   font-size: 10rem;
-  color: #dc148f;
+  color: #be0000;
   padding: 15%;
-  text-shadow: 3px 3px 5px #43eb43;
+  text-shadow: 3px 3px 5px #fff;
 }
 
 header {
@@ -289,8 +340,19 @@ header a {
 header a:hover,
 header a:active,
 header a:focus-within {
-  border: 5px solid #43eb43;
-  border-bottom-width: 20px;
+  border-bottom-width: 30px;
+}
+
+header a:hover::after,
+header a:active::after,
+header a:focus-within::after {
+  content: '🍨';
+}
+
+.arrows {
+  margin-top: 5%;
+  font-size: 5rem;
+  color: #fff;
 }
 
 @media (max-width: 1100px) {
@@ -303,12 +365,14 @@ header a:focus-within {
   h1 {
     font-size: 5rem;
     padding-top: 25%;
+    padding-bottom: 5%;
   }
 }
 
 @media (orientation: portrait) and (max-width: 900px) {
   h1 {
     font-size: 8rem;
+    padding-bottom: 20%;
   }
 }
 
