@@ -6,9 +6,49 @@
 body {
     font-size: 100%;
     @include baseFont;
+    margin: 0;
+    text-align: center;
 }
 h1,
 h2, 
 h3 {
     @include headerFont;
 }
+
+//IMG OPTIONS DIV
+
+.imageOptions {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    column-gap: 1rem;
+}
+
+.imageOne,
+.imageTwo,
+.imageThree,
+.imageFour {
+    grid-row: 1/2;
+}
+
+.imageOne {
+    grid-column: 1/2;
+}
+.imageTwo{
+    grid-column: 2/3;
+}
+.imageThree{
+    grid-column: 3/4;
+}
+.imageFour{
+    grid-column: 4/5;
+}
+
+img {
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+}
+
+

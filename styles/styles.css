@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -245,6 +246,8 @@ body {
   font-size: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
+  margin: 0;
+  text-align: center;
 }
 
 h1,
@@ -253,6 +256,133 @@ h3 {
   font-family: 'Recursive', sans-serif;
 }
 
+.imageOptions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.imageOne,
+.imageTwo,
+.imageThree,
+.imageFour {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.imageOne {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.imageTwo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.imageThree {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.imageFour {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+img {
+  width: 100%;
+}
+
+.images {
+  width: 100%;
+}
+
 h1 {
-  font-size: 4rem;
+  font-size: 10rem;
+  color: #be0000;
+  padding: 15%;
+  text-shadow: 3px 3px 5px #fff;
+}
+
+header {
+  background: radial-gradient(tomato 50%, #ffa600 25%, #43eb43 25%);
+  background-image: url(../../img/byXiaolongWongAtUnsplash.jpg);
+  background-size: cover;
+  height: 150vh;
+  margin-top: -10%;
+  background-position: center;
+}
+
+header a {
+  background-color: tomato;
+  color: #fff;
+  padding: 1.5% 2.5%;
+  text-align: center;
+  line-height: 35.6px;
+  font-size: 20px;
+  margin: 5%;
+  border: 5px solid #fff;
+  border-radius: 5% 5% 70% 70%;
+  -webkit-box-shadow: 2px 16px 2px rgba(170, 170, 170, 0.541);
+          box-shadow: 2px 16px 2px rgba(170, 170, 170, 0.541);
+  text-decoration: none;
+}
+
+header a:hover,
+header a:active,
+header a:focus-within {
+  border-bottom-width: 30px;
+}
+
+header a:hover::after,
+header a:active::after,
+header a:focus-within::after {
+  content: '🍨';
+}
+
+.arrows {
+  margin-top: 5%;
+  font-size: 5rem;
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    padding-top: 50%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  h1 {
+    font-size: 5rem;
+    padding-top: 25%;
+    padding-bottom: 5%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  h1 {
+    font-size: 8rem;
+    padding-bottom: 20%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 700px) {
+  h1 {
+    font-size: 4.5rem;
+    margin-left: -5%;
+    padding-top: 80%;
+  }
+  header {
+    height: 100vh;
+  }
 }
