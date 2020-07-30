@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -339,8 +340,19 @@ header a {
 header a:hover,
 header a:active,
 header a:focus-within {
-  border: 5px solid #43eb43;
-  border-bottom-width: 20px;
+  border-bottom-width: 30px;
+}
+
+header a:hover::after,
+header a:active::after,
+header a:focus-within::after {
+  content: '🍨';
+}
+
+.arrows {
+  margin-top: 5%;
+  font-size: 5rem;
+  color: #fff;
 }
 
 @media (max-width: 1100px) {
@@ -353,12 +365,14 @@ header a:focus-within {
   h1 {
     font-size: 5rem;
     padding-top: 25%;
+    padding-bottom: 5%;
   }
 }
 
 @media (orientation: portrait) and (max-width: 900px) {
   h1 {
     font-size: 8rem;
+    padding-bottom: 20%;
   }
 }
 

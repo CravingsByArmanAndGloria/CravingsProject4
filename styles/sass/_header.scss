@@ -25,6 +25,18 @@ header a {
      @include allButtonHover;
  }
 
+ header a:hover::after,
+ header a:active::after,
+ header a:focus-within::after{
+     content: '🍨';
+ }
+
+ .arrows {
+     margin-top: 5%;
+     font-size: 5rem;
+     color: $color5;
+ }
+
  //MEDIA QUERY
  @media (max-width: 1100px){
      h1 {
@@ -36,12 +48,14 @@ header a {
     h1 {
         font-size: 5rem;
         padding-top: 25%;
+        padding-bottom: 5%;
     }
 }
 
 @media (orientation: portrait) and (max-width: 900px){
     h1 {
         font-size: 8rem;
+        padding-bottom: 20%;
     }
 }
 

@@ -36,8 +36,7 @@ $color6: rgba(170, 170, 170, 0.541);
     box-shadow: 2px 16px 2px $color6;
 }
 
-@mixin allButtonHover($borderCH: $color2){
-    border: 5px solid $borderCH;
-    border-bottom-width: 20px;
+@mixin allButtonHover(){
+    border-bottom-width: 30px;
 }
 // question styles
