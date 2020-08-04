@@ -1,54 +1,60 @@
+// styles throughout site
 .wrapper {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+// base font size, font family and text alignment
 body {
     font-size: 100%;
-    @include baseFont;
+    font-family: $baseFont;
     margin: 0;
     text-align: center;
 }
-h1,
-h2, 
-h3 {
-    @include headerFont;
+
+// global button styles
+a {
+    text-decoration: none;
+    color: $black;
+    padding: 10px 20px;
+    background-color: $white;
+    border-radius: 50px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 20px;
+    display: inline-block;
+    transition: scale 0.3s;
+    border: 5px solid $black;
+}
+// button hover/focus styles
+a:hover,
+a:focus {
+    background-color: $hoverColour;
+    color: $white;
+    transform: scale(1.05);
 }
 
-//IMG OPTIONS DIV
-
-.imageOptions {
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    column-gap: 1rem;
+h1 {
+    font-family: $mainFont;
 }
 
-.imageOne,
-.imageTwo,
-.imageThree,
-.imageFour {
-    grid-row: 1/2;
+h2 {
+    font-size: 2.2rem;
+    color: $white;
+    font-family: $baseFont;
+    margin: 0;
 }
 
-.imageOne {
-    grid-column: 1/2;
+// global media queries 
+// adjusting button sizes as screen shrinks
+@media (max-width:850px) {
+    // adjust button font size
+    a {
+        font-size: 1.6rem;
+    }
 }
-.imageTwo{
-    grid-column: 2/3;
+@media (max-width:500px) {
+    a {
+        font-size:1.2rem;
+    }
 }
-.imageThree{
-    grid-column: 3/4;
-}
-.imageFour{
-    grid-column: 4/5;
-}
-
-img {
-    width: 100%;
-}
-
-.images {
-    width: 100%;
-}
-
-
