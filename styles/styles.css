@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -203,15 +202,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -222,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -244,145 +234,254 @@ html {
 
 body {
   font-size: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-family: "Patrick Hand", cursive;
   margin: 0;
   text-align: center;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Recursive', sans-serif;
+a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 20px;
+  display: inline-block;
+  -webkit-transition: scale 0.3s;
+  transition: scale 0.3s;
+  border: 5px solid #000;
+}
+
+a:hover,
+a:focus {
+  background-color: #8B0000;
+  color: #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  font-family: "Patrick Hand", cursive;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  a {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  a {
+    font-size: 1.2rem;
+  }
+}
+
+header {
+  background-image: url(../img/pexels-sharon-mccutcheon-3695378.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+h1 {
+  font-size: 16rem;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 100px;
+  padding-top: 70px;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+}
+
+header h2 span {
+  font-family: "Pacifico", cursive;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.headerDiv {
+  padding: 40px;
+  background-color: #DC143C;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 565px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+main {
+  padding: 200px 0;
+}
+
+.mainSectionHeading {
+  font-size: 3rem;
+}
+
+main span {
+  text-transform: capitalize;
+  font-family: "Pacifico", cursive;
+}
+
+.mainHeadingStyle {
+  width: 100%;
+  background-color: #DC143C;
+  padding: 30px 0;
+  margin-bottom: 75px;
+}
+
+main p {
+  font-size: 1.5rem;
 }
 
 .imageOptions {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 25% 25% 25% 25%;
-      grid-template-rows: 25% 25% 25% 25%;
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
-}
-
-.imageOne,
-.imageTwo,
-.imageThree,
-.imageFour {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
-}
-
-.imageOne {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
-
-.imageTwo {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-}
-
-.imageThree {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-}
-
-.imageFour {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4/5;
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 img {
   width: 100%;
+  height: 100%;
 }
 
 .images {
   width: 100%;
+  border: 9px solid transparent;
+  -webkit-transition: scale 0.3s;
+  transition: scale 0.3s;
 }
 
-h1 {
-  font-size: 10rem;
-  color: #be0000;
-  padding: 15%;
-  text-shadow: 3px 3px 5px #fff;
+.images:hover,
+.images:focus {
+  border: 9px solid #DC143C;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-header {
-  background: radial-gradient(tomato 50%, #ffa600 25%, #43eb43 25%);
-  background-image: url(../../img/byXiaolongWongAtUnsplash.jpg);
-  background-size: cover;
-  height: 150vh;
-  margin-top: -10%;
-  background-position: center;
+.images:active {
+  border: 9px solid #FFA500;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: scale 0.2s;
+  transition: scale 0.2s;
 }
 
-header a {
-  background-color: tomato;
-  color: #fff;
-  padding: 1.5% 2.5%;
+.resultsTitleDiv {
+  width: 100%;
+  background-color: #DC143C;
+  padding: 18px 0;
+  margin-top: 100px;
+}
+
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resultsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 9px solid #DC143C;
+  margin-top: 50px;
+  height: 55vh;
+  max-width: 1000px;
+}
+
+.resultsImage {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  display: inline-block;
+  border-right: 9px solid #DC143C;
+}
+
+.resultsContact {
+  display: block;
   text-align: center;
-  line-height: 35.6px;
-  font-size: 20px;
-  margin: 5%;
-  border: 5px solid #fff;
-  border-radius: 5% 5% 70% 70%;
-  -webkit-box-shadow: 2px 16px 2px rgba(170, 170, 170, 0.541);
-          box-shadow: 2px 16px 2px rgba(170, 170, 170, 0.541);
-  text-decoration: none;
+  padding: 15px;
+  width: 100%;
+  font-size: 1.6rem;
 }
 
-header a:hover,
-header a:active,
-header a:focus-within {
-  border-bottom-width: 30px;
+@media (max-width: 1000px) {
+  .resultsDiv {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .resultsImage {
+    margin: 0 auto;
+    max-width: none;
+    border-right: none;
+    border-bottom: 9px solid #DC143C;
+    max-height: 400px;
+    height: auto;
+  }
+  .resultsContact {
+    font-size: 1.4rem;
+  }
 }
 
-header a:hover::after,
-header a:active::after,
-header a:focus-within::after {
-  content: '🍨';
-}
-
-.arrows {
-  margin-top: 5%;
-  font-size: 5rem;
+footer {
+  width: 100%;
+  background-color: #DC143C;
   color: #fff;
+  margin-bottom: 0;
 }
 
-@media (max-width: 1100px) {
-  h1 {
-    padding-top: 50%;
-  }
-}
-
-@media (orientation: landscape) and (max-width: 900px) {
-  h1 {
-    font-size: 5rem;
-    padding-top: 25%;
-    padding-bottom: 5%;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 900px) {
-  h1 {
-    font-size: 8rem;
-    padding-bottom: 20%;
-  }
-}
-
-@media (orientation: portrait) and (max-width: 700px) {
-  h1 {
-    font-size: 4.5rem;
-    margin-left: -5%;
-    padding-top: 80%;
-  }
-  header {
-    height: 100vh;
-  }
+footer p {
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
