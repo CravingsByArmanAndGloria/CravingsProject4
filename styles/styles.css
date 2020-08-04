@@ -202,15 +202,6 @@ template {
   display: none;
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: '';
-  clear: both;
-  height: 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -221,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -243,16 +234,16 @@ html {
 
 body {
   font-size: 100%;
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
   margin: 0;
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000;
   padding: 10px 20px;
-  background-color: white;
+  background-color: #fff;
   border-radius: 50px;
   font-size: 1.8rem;
   font-weight: 700;
@@ -260,25 +251,25 @@ a {
   display: inline-block;
   -webkit-transition: scale 0.3s;
   transition: scale 0.3s;
-  border: 5px solid black;
+  border: 5px solid #000;
 }
 
 a:hover,
 a:focus {
   background-color: #8B0000;
-  color: white;
+  color: #fff;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 h2 {
   font-size: 2.2rem;
-  color: white;
-  font-family: 'Patrick Hand', cursive;
+  color: #fff;
+  font-family: "Patrick Hand", cursive;
   margin: 0;
 }
 
@@ -307,14 +298,14 @@ h1 {
   margin-top: 0;
   margin-bottom: 100px;
   padding-top: 70px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   letter-spacing: 1px;
-  color: white;
+  color: #fff;
   text-shadow: -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
 }
 
 header h2 span {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 2.2rem;
   font-weight: 400;
   text-transform: capitalize;
@@ -368,7 +359,7 @@ main {
 
 main span {
   text-transform: capitalize;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .mainHeadingStyle {
@@ -376,6 +367,10 @@ main span {
   background-color: #DC143C;
   padding: 30px 0;
   margin-bottom: 75px;
+}
+
+main p {
+  font-size: 1.5rem;
 }
 
 .imageOptions {
@@ -482,7 +477,7 @@ img {
 footer {
   width: 100%;
   background-color: #DC143C;
-  color: white;
+  color: #fff;
   margin-bottom: 0;
 }
 

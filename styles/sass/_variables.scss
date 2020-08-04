@@ -1,13 +1,12 @@
 // variables
 // colours
-
-
+$white: #fff;
+$black: #000;
+$hoverColour: #8B0000;
+$mainColour: #DC143C;
+$activeColour: #FFA500;
 
 // fonts
-@mixin baseFont {
-    font-family: 'Patrick Hand', cursive;
-}
-@mixin headerFont {
-    font-family: 'Pacifico', cursive;
-}
+$baseFont: 'Patrick Hand', cursive;
+$mainFont: 'Pacifico', cursive;
 
