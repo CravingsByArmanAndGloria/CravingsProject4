@@ -1,13 +1,11 @@
+// // smooth scroll 
+// $('a')
+
 // collections list to call from api:
 // happy herbivore
-// barbeque and grill
-// serving pho
 // burgers
 // sushi
-// mamma mia
-// mexican magic
 // sweet tooth
-
 
 
 // GLOBAL VARIABLES:
@@ -98,12 +96,22 @@ cravingApp.zomatoBurgers = () => {
             const i = Math.floor(Math.random() * result.restaurants.length);
             // console.log('res.search', result.restaurants[i].restaurant);
             $('.results').html(`
-                <h2>${result.restaurants[i].restaurant.name}</h2>
-                <img src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured burgers">
-                <p class="contactInfo">${result.restaurants[i].restaurant.phone_numbers}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.location.address}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.timings}</p>
+                <div class="resultsTitleDiv" >
+                    <h2 class="resultsTitle wrapper">${result.restaurants[i].restaurant.name}</h2>
+                </div>
+                <div class="resultsDiv wrapper">
+                    <img class="resultsImage" src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured burgers">
+                    <div class="resultsContact">
+                        <p class="contactNumber">${result.restaurants[i].restaurant.phone_numbers}</p>
+                        <p class="contactAddress">${result.restaurants[i].restaurant.location.address}</p>
+                        <p class="contactHours">${result.restaurants[i].restaurant.timings}</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="#formStart">I'm craving something else</a>
+                </div>
             `)
+            window.location = "#results";
         })
         .fail((error) => {
             console.log('error', error)
@@ -128,12 +136,22 @@ cravingApp.zomatoVeggies = () => {
             const i = Math.floor(Math.random() * result.restaurants.length);
             // console.log('res.search', result.restaurants[i].restaurant);
             $('.results').html(`
-                <h2>${result.restaurants[i].restaurant.name}</h2>
-                <img src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured veggies">
-                <p class="contactInfo">${result.restaurants[i].restaurant.phone_numbers}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.location.address}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.timings}</p>
+                <div class="resultsTitleDiv" >
+                    <h2 class="resultsTitle wrapper">${result.restaurants[i].restaurant.name}</h2>
+                </div>
+                <div class="resultsDiv wrapper">
+                    <img class="resultsImage" src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured veggies">
+                    <div class="resultsContact">
+                        <p class="contactNumber">${result.restaurants[i].restaurant.phone_numbers}</p>
+                        <p class="contactAddress">${result.restaurants[i].restaurant.location.address}</p>
+                        <p class="contactHours">${result.restaurants[i].restaurant.timings}</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="#formStart">I'm craving something else</a>
+                </div>
             `)
+            window.location = "#results";
         })
         .fail((error) => {
             console.log('error', error)
@@ -157,12 +175,22 @@ cravingApp.zomatoSushis = () => {
             const i = Math.floor(Math.random() * result.restaurants.length);
             // console.log('res.search', result.restaurants[i].restaurant);
             $('.results').html(`
-                <h2>${result.restaurants[i].restaurant.name}</h2>
-                <img src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured sushi">
-                <p class="contactInfo">${result.restaurants[i].restaurant.phone_numbers}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.location.address}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.timings}</p>
+                <div class="resultsTitleDiv" >
+                    <h2 class="resultsTitle wrapper">${result.restaurants[i].restaurant.name}</h2>
+                </div>
+                <div class="resultsDiv wrapper">
+                    <img class="resultsImage" src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured sushi">
+                    <div class="resultsContact">
+                        <p class="contactNumber">${result.restaurants[i].restaurant.phone_numbers}</p>
+                        <p class="contactAddress">${result.restaurants[i].restaurant.location.address}</p>
+                        <p class="contactHours">${result.restaurants[i].restaurant.timings}</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="#formStart">I'm craving something else</a>
+                </div>
             `)
+            window.location = "#results";
         })
         .fail((error) => {
             console.log('error', error)
@@ -186,12 +214,22 @@ cravingApp.zomatoSweets = () => {
             const i = Math.floor(Math.random() * result.restaurants.length);
             // console.log('res.search', result.restaurants[i].restaurant);
             $('.results').html(`
-                <h2>${result.restaurants[i].restaurant.name}</h2>
-                <img src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured sweets">
-                <p class="contactInfo">${result.restaurants[i].restaurant.phone_numbers}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.location.address}</p>
-                <p class="contactInfo">${result.restaurants[i].restaurant.timings}</p>
+                <div class="resultsTitleDiv" >
+                    <h2 class="resultsTitle wrapper">${result.restaurants[i].restaurant.name}</h2>
+                </div>
+                <div class="resultsDiv wrapper">
+                    <img class="resultsImage" src="${result.restaurants[i].restaurant.featured_image}" alt="${result.restaurants[i].restaurant.name}\'s featured sweets">
+                    <div class="resultsContact">
+                        <p class="contactNumber">${result.restaurants[i].restaurant.phone_numbers}</p>
+                        <p class="contactAddress">${result.restaurants[i].restaurant.location.address}</p>
+                        <p class="contactHours">${result.restaurants[i].restaurant.timings}</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="#formStart">I'm craving something else</a>
+                </div>
             `)
+            window.location = "#results";
         })
         .fail((error) => {
             console.log('error', error)
@@ -207,4 +245,5 @@ cravingApp.init = () => {
 //Doc. ready
 $(function () {
     cravingApp.init();
+    $('a').smoothScroll();
 })
